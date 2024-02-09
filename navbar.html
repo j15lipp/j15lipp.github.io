@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar practice</title>
+    <style>
+        nav{
+            display: flex;
+            background-color: #333333;
+            color: white;
+            padding: 0px 20px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo{
+            font-size: 24px;
+        }
+        nav a{
+            color: white;
+            text-decoration-line: none;
+            font-size: 18px;
+            margin: 0px 12px;
+        }
+        nav li{
+            padding: 5px 0px;
+        }
+        nav li:hover{
+            background-color: rgb(67, 105, 207);
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+        }
+        @media (max-width: 600px){
+            nav{
+                flex-direction: column;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            nav ul{
+                width: 100%;
+                flex-direction: column;
+                padding-left: 0px;
+            }
+            nav li{
+                padding: 15px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                Logo
+            </div>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
