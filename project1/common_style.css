@@ -10,7 +10,7 @@ main{
     flex-grow: 1;
 }
 main article{
-    background-color: lightgray;
+    background-color: #5bcefa;
     height: 20vh;
     flex-grow: 1;
     padding: 1em;
