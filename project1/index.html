@@ -12,6 +12,23 @@
                 justify-content: center;
                 align-items: center;
             }
+            p{
+                font-size: 16pt;
+                font-family: sans-serif;
+            }
+            #image{
+                box-shadow: 0px 0px 5px rgb(33,33,33);
+                transition: transform 1s;
+            }
+            #image:hover{
+                transform: scale(1.1);
+                animation: linear .5s forwards glow;
+            }
+            @keyframes glow {
+                100%{
+                    box-shadow: 0px 0px 50px white;
+                }
+            }
         </style>
     </head>
 
@@ -21,7 +38,7 @@
                 
             </div>
             <ul>
-                <li>
+                <li class="active">
                     <a href="/project1/index.html">Home</a>
                 </li>
                 <li>
@@ -38,9 +55,9 @@
         <main>
             <article>
                 <div>
-                    <image src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/640px-Cat_November_2010-1a.jpg" alt = "find better image" width = "128"></image>
+                    <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/640px-Cat_November_2010-1a.jpg" alt = "i dont have any images of myself" width = "128" id="image"></image>
                 </div>
-                <p>name and also find an image thats not just a placeholder</p>
+                <p>Jake Lippold</p>
             </article>
         </main>
     </body>

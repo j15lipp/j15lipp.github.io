@@ -11,7 +11,7 @@ main{
 }
 main article{
     background-color: #5bcefa;
-    height: 20vh;
+    height: auto;
     flex-grow: 1;
     padding: 1em;
 }
@@ -44,38 +44,42 @@ nav{
     padding: 0px 20px;
     justify-content: space-between;
     align-items: center;
-    }
-    nav .logo{
-        font-size: 24px;
-    }
-    nav a{
-        color: white;
-        text-decoration-line: none;
-        font-size: 18px;
-        margin: 0px 12px;
-    }
-    nav li{
-        padding: 5px 0px;
-    }
-    nav li:hover{
-        background-color: rgb(67, 105, 207);
+}
+nav .logo{
+    font-size: 24px;
+}
+nav a{
+    color: white;
+    text-decoration-line: none;
+    font-size: 18px;
+    margin: 0px 12px;
+}
+nav li{
+    border: 1px solid #333333;
+    padding: 5px 0px;
+}
+nav li:hover{
+    background-color: rgb(67, 105, 207);
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+@media (max-width: 575px){
+    nav{
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     nav ul{
-        list-style: none;
-        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding-left: 0px;
     }
-    @media (max-width: 575px){
-        nav{
-            flex-direction: column;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        nav ul{
-            width: 100%;
-            flex-direction: column;
-            padding-left: 0px;
-        }
-        nav li{
-            padding: 15px 10px;
-        }
+    nav li{
+        padding: 15px 10px;
     }
+}
+.active{
+    border: 1px solid white
+}

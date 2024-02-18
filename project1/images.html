@@ -7,10 +7,19 @@
         <link rel = "stylesheet" href = "common_style.css">
         <style>
             article{
-                display: flex;
-                flex-wrap: 1;
-                justify-content: space-around;
-                align-items: space-around;
+                width: 90%;
+                display: grid;
+                grid: repeat(2, 49%) / auto-flow 33%;
+            }
+            article div{
+                background-color: white;
+                border-radius: 8px;
+                font-family: sans-serif;
+                margin: 5px;
+                padding: 15px;
+            }
+            article img{
+                border-radius: 7px;
             }
         </style>
     </head>
@@ -30,19 +39,49 @@
                 <li>
                     <a href="/project1/blog.html">Blog</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="/project1/images.html">Images</a>
                 </li>
             </ul>
         </nav>
         <main>
             <article>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
+                <div>
+                    <img src="https://placekitten.com/300/300" width="100%" alt="image 1">
+                    <p>
+                        a kitten
+                    </p>
+                </div>
+                <div>
+                    <img src="https://placekitten.com/301/301" width="100%" alt="image 2">
+                    <p>
+                        another kitten
+                    </p>
+                </div>
+                <div>
+                    <img src="https://placekitten.com/302/302" width="100%" alt="image 3">
+                    <p>
+                        a small feline
+                    </p>
+                </div>
+                <div>
+                    <img src="https://placekitten.com/303/303" width="100%" alt="image 4">
+                    <p>
+                        a rather tiny animal
+                    </p>
+                </div>
+                <div>
+                    <img src="https://placekitten.com/304/304" width="100%" alt="image 5">
+                    <p style="font-style: italic">
+                        cat
+                    </p>
+                </div>
+                <div>
+                    <img src="https://placekitten.com/306/306" width="100%" alt="image 6">
+                    <p>
+                        silly creature
+                    </p>
+                </div>
             </article>
         </main>
     </body>

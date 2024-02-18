@@ -5,6 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Me</title>
         <link rel = "stylesheet" href = "common_style.css">
+        <style>
+            article{
+                display: flex;
+                justify-content: center;
+            }
+            .about{
+                width: 90%;
+                height: 90%;
+                background-color: white;
+                margin-top: 20px;
+                border-radius: 8px;
+                font-family: sans-serif;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        </style>
     </head>
 
     <body>
@@ -16,7 +32,7 @@
                 <li>
                     <a href="/project1/index.html">Home</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="/project1/aboutme.html">About</a>
                 </li>
                 <li>
@@ -29,7 +45,17 @@
         </nav>
         <main>
             <article>
-                
+                <div class="about">
+                    <h1>
+                        About Me
+                    </h1>
+                    <p>
+                        Here's where I'd put any interesting information about myself, if I had any
+                    </p>
+                    <p>
+                        Fun fact: did you know most cats are actually lactose intolerant?
+                    </p>
+                </div>
             </article>
         </main>
     </body>

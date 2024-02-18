@@ -5,6 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Blog</title>
         <link rel = "stylesheet" href = "common_style.css">
+        <style>
+            article{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .post{
+                width: 90%;
+                background-color: white;
+                margin-top: 20px;
+                border-radius: 8px;
+                font-family: sans-serif;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .rainbow{
+                animation: linear infinite 5s cycle;
+            }
+            @keyframes cycle {
+                0%{
+                    color: #800000;
+                }
+                17%{
+                    color: #808000;
+                }
+                33%{
+                    color: #008000;
+                }
+                50%{
+                    color: #008080;
+                }
+                67%{
+                    color: #000080;
+                }
+                83%{
+                    color: #800080;
+                }
+                100%{
+                    color: #800000;
+                }
+            }
+        </style>
     </head>
 
     <body>
@@ -19,7 +61,7 @@
                 <li>
                     <a href="/project1/aboutme.html">About</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="/project1/blog.html">Blog</a>
                 </li>
                 <li>
@@ -29,7 +71,22 @@
         </nav>
         <main>
             <article>
-
+                <div class="post">
+                    <h1>
+                        I need content to fill this website with
+                    </h1>
+                    <p class="rainbow" style="font-family: 'Times New Roman', Times, serif; font-size: 13pt;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel mi tincidunt, fringilla elit sed, pulvinar lectus. Nam elementum sem tortor, lacinia eleifend lectus semper id. Donec placerat nisl leo, nec vestibulum dolor sodales aliquet. Cras sem sapien, placerat eget vestibulum eget, gravida ac metus. In sagittis nec orci nec pulvinar. Ut ac scelerisque dolor. Nulla ornare nec sapien vitae faucibus. Sed turpis lacus, fermentum at nisl id, ultrices elementum nibh. Donec feugiat congue hendrerit.
+                    </p>
+                </div>
+                <div class="post">
+                    <h1>
+                        My first post!!!
+                    </h1>
+                    <p>
+                        wow exciting
+                    </p>
+                </div>
             </article>
         </main>
     </body>
