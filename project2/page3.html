@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Quest Begins</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="container">
+    <h1>Pack Your Bag</h1>
+    <p>Select the supplies you wish to take on your quest. Choose wisely, as you can only carry a limited amount.</p>
+    <form id="p3form" type="get" action="page4.html">
+      <fieldset>
+        <div class="supplies">
+          <input id="food" type="checkbox" name="food">
+            <label for="food"><strong>Food: </strong>Essential for energy.</label>
+          </input>
+        </div>
+        <div class="supplies">
+          <input id="water" type="checkbox" name="water">
+            <label for="water"><strong>Water: </strong>Hydration is key!</label>
+          </input>
+        </div>
+        <div class="supplies">
+          <input id="pots" type="checkbox" name="potions">
+            <label for="pots"><strong>Magic Potions: </strong>For health and magical energy</label>
+          </input>
+        </div>
+        <div class="supplies">
+          <input id="maps" type="checkbox" name="maps">
+            <label for="maps"><strong>Maps: </strong>Don't get lost in the wilderness!</label>
+          </input>
+        </div>
+        <div class="supplies">
+          <input id="sword" type="checkbox" name="sword">
+            <label for="sword"><strong>Sword: </strong>Fend off those pesky foes!</label>
+          </input>
+        </div>
+      </fieldset>
+      <input type="submit" value="Continue">
+    </form>
+  </section>
+</body>
+</html>
+<!--Questions
+Why do you think checkboxes were used instead of a dropdown menu for selecting supplies? What advantages or disadvantages does this approach offer?
+  Checkboxes were used so that multiple options could be selected at the same time
+-->
