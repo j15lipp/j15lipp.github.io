@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The First Obstacle</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #submitButton{
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <h1>The First Obstacle</h1>
+    <p>As you venture deeper into the Dark Forest, you encounter a mystical guardian. The guardian blocks your path and poses a riddle:</p>
+    <blockquote>"I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?”</blockquote>
+    <form id="p4form" type="get" action="page5.html">
+      <label for="p4form">Your Answer:</label>
+      <input type="text" id="riddle" name="riddle"></input>
+      <input type="submit" id="submitButton" value="Submit Answer">
+    </form>
+  </section>
+  <script>
+    const button = document.getElementById("submitButton");
+    const riddle = document.getElementById("riddle");
+
+    function buttonColor(){
+      console.log(riddle.value);
+      if(riddle.value == "echo"){
+        button.style.backgroundColor = "green";
+      }
+      else{
+        button.style.backgroundColor = "red";
+      }
+    }
+
+    riddle.addEventListener("keyup", buttonColor);
+  </script>
+</body>
+</html>
