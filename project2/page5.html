@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Jorney Continues</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    section{
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <h1>The Journey Continues</h1>
+    <p>With the guardian's riddle behind you, the path forward splits into three. Each route is known to favor certain traits: strength, wisdom, or stealth. Choose your path wisely, as it will influence the challenges you face ahead.</p>
+    <form id="p5form" type="get" action="page5.html"> <!--dont continue if nothing selected-->
+      <label>Choose your path:</label>
+      <select id="pathChoice" name="pathChoice">
+        <option value="">--Please choose an option--</option>
+        <option value="str">The Path of Strength</option>
+        <option value="ste">The Path of Stealth</option>
+        <option value="wis">The Path of Wisdom</option>
+      </select>
+      <input type="submit" id="submit" value="Continue on Your Journey">
+    </form>
+    <p>Your choice will not only test your abilities but also reveal deeper truths about your character.</p>
+  </section>
+  <script>
+    const form = document.getElementById("p5form");
+    const box = document.getElementById("pathChoice");
+
+    box.addEventListener("change", function(event){
+      let v = event.target.value;
+      if(v == "str"){
+        document.body.style.backgroundColor = "#ffdfdf";
+        form.action = "page6.html";
+      }
+      else if(v == "ste"){
+        document.body.style.backgroundColor = "#dfffdf";
+        form.action = "page5b.html";
+      }
+      else if(v == "wis"){
+        document.body.style.backgroundColor = "#dfdfff";
+        form.action = "page6.html";
+      }
+      else{
+        document.body.style.backgroundColor = "#ffffff";
+        form.action = "page5.html";
+      }
+    });
+  </script>
+</body>
+</html>
