@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quest for the Crystal of Wisdom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+      <h1>Choose Your Character</h1>
+      <form id="characterForm" type="get" action="page3.html">
+        <fieldset>
+          <legend>Choose Your Character</legend>
+          <div class="character">
+            <input type="radio" name="charSel" id="warrior">
+              <strong>Aria, the Warrior: </strong>Strong and brave, with the ability to overcome physical obstacles.
+            </input>
+          </div>
+          <div class="character">
+            <input type="radio" name="charSel" id="mage">
+              <strong>Eldrin, the Mage: </strong>Wise and knowledgeable, with the power to solve puzzles and cast spells.
+            </input>
+          </div>
+          <div class="character">
+            <input type="radio" name="charSel" id="rogue">
+              <strong>Tara, the Rogue: </strong>Quick and cunning, with skills in stealth and persuasion
+            </input>
+          </div>
+        </fieldset>
+        <input type="submit" value="Continue">
+      </form>
+    </section>
+</body>
+</html>
+<!--Questions
+Why is it important for each radio button to have a unique ID?
+  To be able to identify which button is selected
+How can we ensure that only one character can be selected at a time?
+  The radio buttons are assigned the same value in the name field
+What could happen if the labels aren't correctly associated with the radio buttons?
+  The value submitted could end up being different than what the user believes they selected
+-->
