@@ -9,14 +9,35 @@
 <body>
   <section class="container">
     <h1>Your Quest Has Concluded</h1>
-    <p>Based on your choices, [Insert a dynamic conclusion based on the user's journey and final decision]. The kingdom will remember your deeds for generations to come.</p>
+    <p id="change">Based on your choices, you were able to successfully defeat Malakar. The kingdom will remember your deeds for generations to come.</p>
     <p>We hope you enjoyed your adventure. Would you like to provide feedback on your experience?</p>
-    <label for="text">Your Feedback</label>
     <form id="p7form" type="post">
-      <textarea id="text" style="width: 70%; height: 70px" placeholder="Enter your feedback here..."></textarea>
+      <label for="text">Your Feedback:</label>
+      <textarea id="text" style="width: 75%; height: 70px" placeholder="Enter your feedback here..."></textarea>
       <button>Submit Feedback</button>
     </form>
     <button onclick="location.href='welcome.html'">Play Again</button>
   </section>
+  <script>
+    const charSel = localStorage.getItem("charSel");
+    const urlParams = new URLSearchParams(window.location.search);
+    const weapon = urlParams.get("weapon");
+    const plate = urlParams.get("plate");
+    const leather = urlParams.get("leather");
+    const cloak = urlParams.get("cloak");
+    const name = urlParams.get("name");
+    const text = document.getElementById("change");
+    //if you picked the weapon and armor options that make sense for your charater class, get more positive ending text
+    if((charSel == "The Warrior" && weapon == "sword" && plate == "on" && leather == null && cloak == null) ||
+    (charSel == "The Rogue" && weapon == "bow" && leather == "on" && plate == null && cloak == null) ||
+    (charSel == "The Mage" && weapon == "staff" && cloak == "on" && leather == null && plate == null)){
+      text.textContent = "Based on your choices, you effortlessly defeated Malakar and restored peace to the kingdom. The kingdom will remember your deeds for generations to come.";
+    }
+    //easter egg for if you set your name to Malakar
+    if(name == "Malakar"){
+      text.textContent = "Based on your choices, you decided to stop being evil. The kingdom will be relieved, but also confused, for generations to come.";
+    }
+
+  </script>
 </body>
 </html>

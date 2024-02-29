@@ -16,48 +16,54 @@
       <label>Choose Wisely:</label>
       <select>
         <option value="">--Please choose an option--</option>
-        <option value="">Confidently</option>
-        <option value="">Sneakily</option>
-        <option value="">Carefully</option>
+        <option value="c">With Confidence</option>
+        <option value="s">With Stealth</option>
+        <option value="k">With Knowledge</option>
       </select>
-    </fieldset>
-    <fieldset style="margin-top: 12px">
-      <legend>Character Information</legend>
-      <fieldset>
-        <legend>The [placeholder]</legend>
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name">
       </fieldset>
       <fieldset style="margin-top: 12px">
-        <legend>Select Your Weapon</legend>
-        <input type="radio" name="weapon" id="sword" value="sword">
-          <label for="sword">Sword</label>
-        </input>
-        <input type="radio" name="weapon" id="bow" value="bow">
-          <label for="bow">Bow</label>
-        </input>
-        <input type="radio" name="weapon" id="staff" value="staff">
-          <label for="staff">Staff</label>
-        </input>
+        <legend>Character Information</legend>
+        <fieldset>
+          <legend id="charSel">The Unknown</legend>
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name">
+        </fieldset>
+        <fieldset style="margin-top: 12px">
+          <legend>Select Your Weapon</legend>
+          <input type="radio" name="weapon" id="sword" value="sword">
+            <label for="sword">Sword</label>
+          </input>
+          <input type="radio" name="weapon" id="bow" value="bow">
+            <label for="bow">Bow</label>
+          </input>
+          <input type="radio" name="weapon" id="staff" value="staff">
+            <label for="staff">Staff</label>
+          </input>
+        </fieldset>
+        <fieldset style="margin-top: 12px">
+          <legend>Select Your Armor</legend>
+          <input type="checkbox" id="plate" name="plate">
+            <label for="plate">Plate Armor</label>
+          </input>
+          <input type="checkbox" id="leather" name="leather">
+            <label for="leather">Leather Armor</label>
+          </input>
+          <input type="checkbox" id="cloak" name="cloak">
+            <label for="cloak">Cloak</label>
+          </input>
+        </fieldset>
+        <legend style="margin-top: 12px">Leave a message for Malakar:</legend>
+        <textarea style="width: 80%; height: 80px;"></textarea>
       </fieldset>
-      <fieldset style="margin-top: 12px">
-        <legend>Select Your Armor</legend>
-        <input type="checkbox" id="plate" name="plate">
-          <label for="plate">Plate Armor</label>
-        </input>
-        <input type="checkbox" id="leather" name="leather">
-          <label for="leather">Leather Armor</label>
-        </input>
-        <input type="checkbox" id="cloak" name="cloak">
-          <label for="cloak">Cloak</label>
-        </input>
-      </fieldset>
-      <legend style="margin-top: 12px">Leave a message for Malakar:</legend>
-      <textarea style="width: 80%; height: 80px;"></textarea>
-    </fieldset>
-    <button>Face Malakar</button>
+      <button>Face Malakar</button>
     </form>
     <p>Your choice here will determine the fate of the kingdom. Choose wisely.</p>
   </section>
+  <script>
+    //get and use the info from page 2 stored earlier
+    const charSel = localStorage.getItem("charSel");
+    const text = document.getElementById("charSel");
+    text.textContent = charSel;
+  </script>
 </body>
 </html>

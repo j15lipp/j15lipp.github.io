@@ -38,9 +38,15 @@
           </input>
         </div>
       </fieldset>
-      <input type="submit" value="Continue">
+      <input type="submit" value="Continue" >
     </form>
   </section>
+  <script>
+    //store input from the previous form for later use
+    const urlParams = new URLSearchParams(window.location.search);
+    const charSel = urlParams.get("charSel");
+    localStorage.setItem("charSel", charSel);
+  </script>
 </body>
 </html>
 <!--Questions
