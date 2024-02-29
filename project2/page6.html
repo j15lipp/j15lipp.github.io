@@ -64,6 +64,18 @@
     const charSel = localStorage.getItem("charSel");
     const text = document.getElementById("charSel");
     text.textContent = charSel;
+    //bugfix because for some reason the version deployed on github pages is using the old values???? 
+    //idfk, ive pushed the updated version of page 2 multiple times
+    //and if it fixes itself later then ill be kinda mad
+    if(charSel = "warrior"){
+      text.textContent = "The Warrior";
+    }
+    else if(charSel = "mage"){
+      text.textContent = "The Mage";
+    }
+    else if(charSel = "rogue"){
+      text.textContent = "The Rogue";
+    }
   </script>
 </body>
 </html>
